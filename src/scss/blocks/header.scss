@@ -1,0 +1,45 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.header {
+    margin-top: 13px;
+    position: relative;
+
+    &__bg {
+        position: absolute;
+        left: 0;
+        top: 0px;
+        z-index: -1;
+    }
+
+    &__wrapper {
+        width: 740px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $yellow-color;
+        padding-bottom: 30px;
+
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+        gap: 30px;
+    }
+
+    &__item {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        a {
+            color: $white-color;
+            size: 30px;
+            text-decoration: none;
+            font-size: 24px;
+        }
+    }
+
+}

@@ -1,0 +1,51 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.hero {
+    position: relative;
+    margin-top: 160px;
+    padding-bottom: 200px;
+
+    &__bg {
+        width: 1920px;
+        height: 995px;
+        position: absolute;
+        left: 0;
+        top: -267px;
+        z-index: -1;
+        border: none;
+        box-shadow: inset 1px 0px 8px 0px red;
+    }
+
+    &__logo {
+        width: 191px;
+        height: 60px;
+    }
+
+    &__title {
+        width: 703px;
+        margin-top: 35px;
+        color: $white-color;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__text {
+        width: 703px;
+        margin-top: 25px;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 1%;
+        text-align: left;
+    }
+
+    &__buttons-wrapper {
+        display: flex;
+        gap: 35px;
+        margin-top: 232px;
+    }
+}
