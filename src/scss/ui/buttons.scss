@@ -5,6 +5,7 @@
     @include button;
     width: 246px;
     height: 50px;
+    text-transform: uppercase;
 
     &:hover {
         background-color: $yellow-color;
@@ -16,3 +17,19 @@
         color: $white-color;
     }
 }
+
+// .schedule__btn {
+//     @include button;
+//     width: 152px;
+//     height: 60px;
+
+//     &:hover {
+//         background-color: $yellow-color;
+//         color: $white-color;
+//     }
+
+//     &:active {
+//         background-color: $yellow-color;
+//         color: $white-color;
+//     }
+// }

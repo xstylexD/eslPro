@@ -4,13 +4,6 @@
     margin-top: 13px;
     position: relative;
 
-    &__bg {
-        position: absolute;
-        left: 0;
-        top: 0px;
-        z-index: -1;
-    }
-
     &__wrapper {
         width: 740px;
         display: flex;

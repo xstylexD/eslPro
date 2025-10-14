@@ -2,4 +2,180 @@
 
 .schedule {
     margin-top: 140px;
+
+    &__title {
+        border-bottom: 1px solid $yellow-color;
+        padding-bottom: 40px;
+    }
+
+    &__tabs {
+        display: flex;
+        gap: 0;
+    }
+
+    &__content {
+        color: white;
+    }
+
+    &__btn {
+        background: transparent;
+        border: 1px solid rgba(243, 169, 23, 1);
+        width: 152px;
+        height: 60px;
+        color: $white-color;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 30px;
+        letter-spacing: 1%;
+        text-align: center;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $yellow-color;
+            color: $black-color;
+        }
+
+        &-active {
+            background-color: $yellow-color;
+        }
+    }
+
+    &__item {
+        color: $white-color;
+
+    }
+
+    &__slide {}
+}
+
+.swiper {
+    margin-top: 88px;
+    margin-bottom: 100px;
+
+    &-slide {
+        background-color: $gray-color;
+        border-radius: 10px;
+        width: 350px;
+        height: 341px;
+    }
+
+    &__title {
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1%;
+        position: relative;
+
+        // border-bottom: 1px solid $yellow-color;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 278px;
+            height: 1px;
+            background-color: $yellow-color;
+            top: 50px;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__card-header {
+        display: flex;
+        gap: 74px;
+        align-items: center;
+        padding: 40px 30px 20px 30px;
+    }
+
+    &__date {
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+    }
+
+    &__day {
+        color: $white-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1%;
+    }
+
+    &__time {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 1%;
+    }
+
+    &__card-body {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        // margin-top: 55px;
+        padding: 30.5px 31px;
+    }
+
+    &__team-logo {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    &__teams {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__team {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0%;
+    }
+
+    &__team-coef {
+        padding: 5px 14px;
+        width: 58px;
+        height: 30px;
+        color: $white-color;
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 20px;
+        letter-spacing: 2%;
+        text-transform: uppercase;
+        border: 1px solid rgba(243, 169, 23, 1);
+    }
+
+    &__start {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    &__start-time {
+        color: $light-gray-color;
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1%;
+        text-align: left;
+    }
+
+    &__sponsor {
+        width: 58px;
+        height: 15px;
+    }
 }
