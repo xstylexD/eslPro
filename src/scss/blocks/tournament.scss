@@ -1,0 +1,125 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.tournament {
+    background-image: url(/src/img/bgImageDown.png);
+    min-height: 1324px;
+
+    &__wrapper {
+        justify-self: end;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 500px;
+    }
+
+    &__title {
+        color: $white-color;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 45px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__time {
+        color: $white-color;
+        font-size: 25px;
+        font-weight: 700;
+        line-height: 45px;
+        letter-spacing: 0%;
+        text-align: left;
+
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__list-header {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-sharp {
+        width: 72px;
+        height: 55px;
+        background-color: $yellow-color;
+        color: $black-color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__team {
+        width: 581px;
+        height: 55px;
+        background-color: $yellow-color;
+        color: $black-color;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 35px;
+        letter-spacing: 0%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        padding: 10px;
+    }
+
+    &__list-number {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 35px;
+        letter-spacing: 0%;
+        text-align: left;
+        background-color: $gray-color;
+        border: 1px solid $yellow-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 72px;
+        height: 55px;
+    }
+
+    &__list-item {
+        display: flex;
+        align-items: center;
+    }
+
+    &__list-team {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 35px;
+        letter-spacing: 0%;
+        background-color: $gray-color;
+        border: 1px solid $yellow-color;
+        width: 581px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        padding: 20px;
+    }
+}
+
+.info {
+    margin-top: 55px;
+    display: flex;
+    justify-content: center;
+    gap: 125px;
+
+    &__btn {
+        color: $white-color;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0%;
+        text-decoration: none;
+    }
+}

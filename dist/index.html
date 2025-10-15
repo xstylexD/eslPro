@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <title>ESL Pro</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96-_-Tf0D9c.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon-By6UQcaJ.svg" />
+    <link rel="shortcut icon" href="/assets/favicon-CUULZrup.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon-DRL6tPyt.png" />
+    <link rel="manifest" href="/assets/site-CiNTFYO2.webmanifest" />
+
+
+  <script type="module" crossorigin src="/assets/index-CEkZkmpu.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DG5bz0yO.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <img src="data:image/png;base64,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" alt="eslLogo" class="header__logo">
+                <ul class="header__list">
+                    <li class="header__item"><a href="#" class="header__link"><i
+                                class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="header__item"><a href="#" class="header__link"><i class="fa-brands fa-twitch"></i></a>
+                    </li>
+                    <li class="header__item"><a href="#" class="header__link"><i class="fa-brands fa-twitter"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <img class="hero__bg" src="/assets/bgImageUp-BB1eYkoo.jpg" alt="bacground image">
+            <img src="/assets/pubgLogo-DmGL6xET.png" alt="pubg logo" class="hero__logo">
+            <h1 class="hero__title">ESL Pro League CSGO</h1>
+            <p class="hero__text">League CS:GO is the new online league in Counter-Strike: Global Offensive, with
+                $100,000 total prize pool. 16 teams from Europe and the CIS will take part in the League, with 4
+                teams going to League through open qualifiers.</p>
+            <div class="hero__buttons-wrapper">
+                <button class="btn-default">
+                    read announcement
+                </button>
+                <button class="btn-default">
+                    get tickets
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="schedule">
+        <div class="container">
+            <h2 class="schedule__title">Расписание и результаты</h2>
+            <div class="schedule__tabs">
+                <button class="schedule__btn schedule__btn-active">Matches</button>
+                <button class="schedule__btn">Battles</button>
+            </div>
+
+            <div class="schedule__content">
+                <div class="schedule__item ">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/png;base64,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" alt="Regina logo">
+                                            <img src="/assets/kathryn-CgK3Fnzx.png" alt="kathryn logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Regina Watson</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Kathryn Jones</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="data:image/png;base64,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" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="/assets/ricardo-fnkNuwhZ.png" alt="ricardo logo">
+                                            <img src="data:image/png;base64,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" alt="bruce logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Ricardo Hawkins</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Bruce Simmons</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="data:image/png;base64,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" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="/assets/jenny-1GNpTkR5.png" alt="jenny logo">
+                                            <img src="/assets/arlene-C_gPs_X5.png" alt="arlene logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Jenny Bell</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Kathryn Jones</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="data:image/png;base64,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" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="/assets/jenny-1GNpTkR5.png" alt="jenny logo">
+                                            <img src="/assets/arlene-C_gPs_X5.png" alt="arlene logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Jenny Bell</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Kathryn Jones</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="data:image/png;base64,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" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="/assets/jenny-1GNpTkR5.png" alt="jenny logo">
+                                            <img src="/assets/arlene-C_gPs_X5.png" alt="arlene logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Regina Watson</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Arlene Robertson</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="data:image/png;base64,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" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <!-- <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Asia Minor: Play-Off</h4>
+                                        <div class="swiper__date">
+                                            <p class="swiper__day">29 Oct</p>
+                                            <p class="swiper__time">19:00</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="/src/logo/regina.png" alt="Regina logo">
+                                            <img src="/src/logo/kathryn.png" alt="kathryn logo">
+                                        </div>
+
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Regina Watson</h3>
+                                            <p class="swiper__team-coef">3.22</p>
+                                        </div>
+                                        <div class="swiper__teams">
+                                            <h3 class="swiper__team">Kathryn Jones</h3>
+                                            <p class="swiper__team-coef">53.22</p>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Starts in: 5 hours 39 min • Bо 3</p>
+                                            <img src="/src/logo/sponsor.png" alt="sponsor" class="swiper__sponsor">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="swiper__nav">
+                            <div class="swiper__prev"><i class="fa-solid fa-arrow-left"></i></div>
+                            <div class="swiper-pagination swiper__pag"></div>
+                            <div class="swiper__next"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="schedule__item">
+                    <div class="swiper swiper__battles">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Group Stage</h4>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2016.0713%2035.7144'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='16.071289'%20height='35.714355'%20fill='none'%20customFrame='%23000000'%3e%3cpath%20id='Vector'%20d='M16.0714%203.57143L16.0714%2019.6429L7.14286%2019.6429L7.14286%2035.7143L1.78571%2035.7143L1.78571%2019.6429L0%2019.6429L0%2016.0714L1.78571%2016.0714L1.78571%200L16.0714%200L16.0714%203.57143ZM10.7143%203.57143L7.14286%203.57143L7.14286%2016.0714L10.7143%2016.0714L10.7143%203.57143Z'%20fill='rgb(243.312,168.514,23.3174)'%20fill-rule='nonzero'%20/%3e%3c/svg%3e" alt="pubgIcon">
+                                        </div>
+                                        <div class="swiper__groups">
+                                            <div class="swiper__group">
+                                                <h3 class="swiper__group">Group A</h3>
+                                                <h3 class="swiper__group">Group B</h3>
+                                            </div>
+                                            <div class="swiper__matches">
+                                                <p class="swiper__match">match #2</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Map: Erangel</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Group Stage</h4>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2016.0713%2035.7144'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='16.071289'%20height='35.714355'%20fill='none'%20customFrame='%23000000'%3e%3cpath%20id='Vector'%20d='M16.0714%203.57143L16.0714%2019.6429L7.14286%2019.6429L7.14286%2035.7143L1.78571%2035.7143L1.78571%2019.6429L0%2019.6429L0%2016.0714L1.78571%2016.0714L1.78571%200L16.0714%200L16.0714%203.57143ZM10.7143%203.57143L7.14286%203.57143L7.14286%2016.0714L10.7143%2016.0714L10.7143%203.57143Z'%20fill='rgb(243.312,168.514,23.3174)'%20fill-rule='nonzero'%20/%3e%3c/svg%3e" alt="pubgIcon">
+                                        </div>
+                                        <div class="swiper__groups">
+                                            <div class="swiper__group">
+                                                <h3 class="swiper__group">Group A</h3>
+                                                <h3 class="swiper__group">Group B</h3>
+                                            </div>
+                                            <div class="swiper__matches">
+                                                <p class="swiper__match">match #2</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Map: Erangel</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Group Stage</h4>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2016.0713%2035.7144'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='16.071289'%20height='35.714355'%20fill='none'%20customFrame='%23000000'%3e%3cpath%20id='Vector'%20d='M16.0714%203.57143L16.0714%2019.6429L7.14286%2019.6429L7.14286%2035.7143L1.78571%2035.7143L1.78571%2019.6429L0%2019.6429L0%2016.0714L1.78571%2016.0714L1.78571%200L16.0714%200L16.0714%203.57143ZM10.7143%203.57143L7.14286%203.57143L7.14286%2016.0714L10.7143%2016.0714L10.7143%203.57143Z'%20fill='rgb(243.312,168.514,23.3174)'%20fill-rule='nonzero'%20/%3e%3c/svg%3e" alt="pubgIcon">
+                                        </div>
+                                        <div class="swiper__groups">
+                                            <div class="swiper__group">
+                                                <h3 class="swiper__group">Group A</h3>
+                                                <h3 class="swiper__group">Group B</h3>
+                                            </div>
+                                            <div class="swiper__matches">
+                                                <p class="swiper__match">match #2</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Map: Erangel</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Group Stage</h4>
+                                    </div>
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2016.0713%2035.7144'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='16.071289'%20height='35.714355'%20fill='none'%20customFrame='%23000000'%3e%3cpath%20id='Vector'%20d='M16.0714%203.57143L16.0714%2019.6429L7.14286%2019.6429L7.14286%2035.7143L1.78571%2035.7143L1.78571%2019.6429L0%2019.6429L0%2016.0714L1.78571%2016.0714L1.78571%200L16.0714%200L16.0714%203.57143ZM10.7143%203.57143L7.14286%203.57143L7.14286%2016.0714L10.7143%2016.0714L10.7143%203.57143Z'%20fill='rgb(243.312,168.514,23.3174)'%20fill-rule='nonzero'%20/%3e%3c/svg%3e" alt="pubgIcon">
+                                        </div>
+                                        <div class="swiper__groups">
+                                            <div class="swiper__group">
+                                                <h3 class="swiper__group">Group A</h3>
+                                                <h3 class="swiper__group">Group B</h3>
+                                            </div>
+                                            <div class="swiper__matches">
+                                                <p class="swiper__match">match #2</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Map: Erangel</p>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="swiper__card">
+                                    <div class="swiper__card-header">
+                                        <h4 class="swiper__title">Group Stage</h4>
+                                    </div>
+
+                                    <div class="swiper__card-body">
+                                        <div class="swiper__team-logo">
+                                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2016.0713%2035.7144'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='16.071289'%20height='35.714355'%20fill='none'%20customFrame='%23000000'%3e%3cpath%20id='Vector'%20d='M16.0714%203.57143L16.0714%2019.6429L7.14286%2019.6429L7.14286%2035.7143L1.78571%2035.7143L1.78571%2019.6429L0%2019.6429L0%2016.0714L1.78571%2016.0714L1.78571%200L16.0714%200L16.0714%203.57143ZM10.7143%203.57143L7.14286%203.57143L7.14286%2016.0714L10.7143%2016.0714L10.7143%203.57143Z'%20fill='rgb(243.312,168.514,23.3174)'%20fill-rule='nonzero'%20/%3e%3c/svg%3e" alt="pubgIcon">
+                                        </div>
+                                        <div class="swiper__groups">
+                                            <div class="swiper__group">
+                                                <h3 class="swiper__group">Group A</h3>
+                                                <h3 class="swiper__group">Group B</h3>
+                                            </div>
+                                            <div class="swiper__matches">
+                                                <p class="swiper__match">match #2</p>
+                                            </div>
+                                        </div>
+                                        <div class="swiper__start">
+                                            <p class="swiper__start-time">Map: Erangel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper__nav">
+                            <div class="swiper__prev"><i class="fa-solid fa-arrow-left"></i></div>
+                            <div class="swiper-pagination swiper__pag"></div>
+                            <div class="swiper__next"><i class="fa-solid fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stages">
+        <div class="container">
+            <div class="stages__wrapper">
+                <div class="stages__info">
+                    <h2 class="stages__title">Этапы проведения</h2>
+                    <p class="stages__text">The path to every Major begins with the open qualifiers for the regional
+                        Minor
+                        Championships, spanning Europe, CIS, Americas, and Asia. <span>Here is</span> the schedule of
+                        every
+                        qualifying stage
+                        of StarLadder Major.</p>
+                </div>
+                <div class="stages__steps-wrapper">
+                    <div class="stages__steps">
+                        <div class="stages__steps-info">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2080%2080'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='80.000000'%20height='80.000000'%20fill='none'%3e%3crect%20id='ion:trophy-outline'%20width='80.000000'%20height='80.000000'%20x='0.000000'%20y='0.000000'%20fill='rgb(255,255,255)'%20fill-opacity='0'%20/%3e%3cpath%20id='Vector%20(Stroke)'%20d='M25%2072.5C25%2071.1193%2026.1193%2070%2027.5%2070L52.5%2070C53.8807%2070%2055%2071.1193%2055%2072.5C55%2073.8807%2053.8807%2075%2052.5%2075L27.5%2075C26.1193%2075%2025%2073.8807%2025%2072.5Z'%20fill='rgb(255,255,255)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector%20(Stroke)'%20d='M40%2050C41.3807%2050%2042.5%2051.1193%2042.5%2052.5L42.5%2072.5C42.5%2073.8807%2041.3807%2075%2040%2075C38.6193%2075%2037.5%2073.8807%2037.5%2072.5L37.5%2052.5C37.5%2051.1193%2038.6193%2050%2040%2050Z'%20fill='rgb(255,255,255)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector%20(Stroke)'%20d='M57.4807%205C58.8067%205%2060.0785%205.52679%2061.0162%206.46447C61.9536%207.40191%2062.4804%208.67329%2062.4807%209.99902C62.4807%209.99935%2062.4807%209.99967%2062.4807%2010L59.9807%2010L62.4807%209.99606C62.4807%209.99705%2062.4807%209.99803%2062.4807%209.99902C62.4869%2013.9679%2062.4994%2027.0881%2062.4994%2035C62.4994%2041.1373%2058.5648%2046.163%2054.1415%2049.51C49.7236%2052.853%2044.2051%2055%2039.9932%2055C35.7811%2055%2030.264%2052.8528%2025.8476%2049.5097C21.4256%2046.1624%2017.4932%2041.1368%2017.4932%2035C17.4932%2032.6062%2017.4982%2027.5572%2017.5033%2022.5115L17.5033%2022.5092C17.5084%2017.4627%2017.5135%2012.4199%2017.5135%2010.0328L17.5135%2010.025C17.5176%208.70163%2018.0462%207.43387%2018.9835%206.49956C19.9203%205.56567%2021.189%205.04109%2022.5117%205.04063L22.5106%205.04063L22.5135%207.54062L22.5135%205.04062L57.4807%205ZM57.4807%2010L22.5135%2010.0406C22.5135%2012.4333%2022.5084%2017.4714%2022.5033%2022.509L22.5033%2022.5166C22.4982%2027.5639%2022.4932%2032.6094%2022.4932%2035C22.4932%2038.9069%2025.0451%2042.6313%2028.8653%2045.5231C32.691%2048.419%2037.174%2050%2039.9932%2050C42.8125%2050%2047.2971%2048.4189%2051.1245%2045.5228C54.9465%2042.6308%2057.4994%2038.9064%2057.4994%2035C57.4994%2027.0889%2057.4869%2013.9668%2057.4807%2010.0039L57.4807%2010Z'%20fill='rgb(255,255,255)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector%20(Stroke)'%20d='M5%2015C5%2013.6193%206.11929%2012.5%207.5%2012.5L20%2012.5C21.3807%2012.5%2022.5%2013.6193%2022.5%2015C22.5%2016.3807%2021.3807%2017.5%2020%2017.5L10%2017.5C10%2021.3471%2011.1787%2025.2304%2013.1026%2028.09C15.0357%2030.9634%2017.4807%2032.5%2020%2032.5C21.3807%2032.5%2022.5%2033.6193%2022.5%2035C22.5%2036.3807%2021.3807%2037.5%2020%2037.5C15.2615%2037.5%2011.4565%2034.6007%208.95406%2030.881C6.44239%2027.1477%205%2022.281%205%2017.5L5%2015Z'%20fill='rgb(255,255,255)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector%20(Stroke)'%20d='M57.5%2015C57.5%2013.6193%2058.6193%2012.5%2060%2012.5L72.5%2012.5C73.8807%2012.5%2075%2013.6193%2075%2015L75%2017.5C75%2022.281%2073.5576%2027.1477%2071.0459%2030.881C68.5435%2034.6007%2064.7385%2037.5%2060%2037.5C58.6193%2037.5%2057.5%2036.3807%2057.5%2035C57.5%2033.6193%2058.6193%2032.5%2060%2032.5C62.5193%2032.5%2064.9643%2030.9634%2066.8974%2028.09C68.8213%2025.2304%2070%2021.3471%2070%2017.5L60%2017.5C58.6193%2017.5%2057.5%2016.3807%2057.5%2015Z'%20fill='rgb(255,255,255)'%20fill-rule='evenodd'%20/%3e%3c/svg%3e" alt="trophy" class="stages__steps-img">
+                            <h3 class="stages__title-h3">Registration</h3>
+                            <p class="stages__steps-date">29 sep, 19:00 – 20 nov, 10:00</p>
+                        </div>
+                        <div class="stages__steps-info">
+                            <div class="stages__steps-decor"><img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2080%2080'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='80.000000'%20height='80.000000'%20fill='none'%3e%3crect%20id='tools-and-utensils%20(1)%201'%20width='80.000000'%20height='80.000000'%20x='0.000000'%20y='0.000000'%20fill='rgb(255,255,255)'%20fill-opacity='0'%20/%3e%3cg%20id='Group'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M74.0906%2012.727C68.3675%2012.727%2063.7115%208.07094%2063.7115%202.34812L63.7115%200L16.2886%200L16.2886%202.34812C16.2886%208.07125%2011.6325%2012.727%205.90965%2012.727L3.56152%2012.727L3.56152%2028.3423C3.56152%2039.5634%206.94168%2050.3683%2013.337%2059.5886C19.7323%2068.8087%2028.6678%2075.7606%2039.1775%2079.6922L40.0001%2080L40.8229%2079.6922C51.3328%2075.7606%2060.2682%2068.8089%2066.6632%2059.5886C73.0586%2050.3683%2076.4387%2039.5634%2076.4387%2028.3423L76.4387%2012.727L74.0906%2012.727ZM71.7426%2028.3423L71.7425%2028.3423C71.7425%2038.6023%2068.6517%2048.4814%2062.8042%2056.9119C57.1247%2065.1006%2049.2531%2071.3327%2040%2074.9775C30.747%2071.3325%2022.8753%2065.1006%2017.1957%2056.9119C11.3484%2048.4816%208.25777%2038.6023%208.25777%2028.3423L8.25777%2017.2408C14.6937%2016.2298%2019.7914%2011.1322%2020.8023%204.69625L59.1981%204.69625C60.2089%2011.1322%2065.3065%2016.2298%2071.7426%2017.2408L71.7426%2028.3423Z'%20fill='rgb(255,255,255)'%20fill-rule='nonzero'%20/%3e%3c/g%3e%3c/g%3e%3cg%20id='Group'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M50.4772%2022.0605L34.9339%2037.604L29.5213%2032.1913L19.5591%2042.1537L34.9339%2057.5286L60.4394%2032.0229L50.4772%2022.0605ZM26.2006%2042.154L29.5214%2038.8332L34.9341%2044.2459L50.4774%2028.7024L53.7981%2032.0232L34.9341%2050.8873L26.2006%2042.154Z'%20fill='rgb(255,255,255)'%20fill-rule='nonzero'%20/%3e%3c/g%3e%3c/g%3e%3c/svg%3e"
+                                    alt="tools-and-utensils" class="stages__steps-img"></div>
+                            <h3 class="stages__title-h3">Check-in</h3>
+                            <p class="stages__steps-date">29 sep, 19:00 – 20 nov, 10:00</p>
+                        </div>
+                        <div class="stages__steps-info">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2077.1206%2080'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='77.120605'%20height='80.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cg%20id='Group'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M70.2797%208.67794C70.1163%208.6713%2069.9526%208.67019%2069.789%208.6748L63.6203%208.6748L63.6203%203.37354C63.6205%201.25304%2061.5963%200%2059.4758%200L53.7891%200C51.6686%200%2050.1265%201.25304%2050.1265%203.37354L50.1265%208.67462L26.9939%208.67462L26.9939%203.37354C26.9939%201.25304%2025.4518%200%2023.3313%200L17.6444%200C15.5241%200%2013.4999%201.25304%2013.4999%203.37354L13.4999%208.67462L7.3314%208.67462C3.39369%208.56485%200.112572%2011.6681%200.00280184%2015.6056C-0.00181036%2015.7691%20-0.000703396%2015.9329%200.00593816%2016.0964L0.00593816%2071.8071C0.00593816%2076.0481%203.0902%2079.9998%207.33121%2079.9998L69.7892%2079.9998C74.0302%2079.9998%2077.1145%2076.0481%2077.1145%2071.8071L77.1145%2016.0964C77.2757%2012.1605%2074.2156%208.83918%2070.2797%208.67794ZM53.7891%203.85543L59.765%203.85543L59.765%2014.4578L53.7891%2014.4578L53.7891%203.85543ZM17.6446%203.85543L23.1387%203.85543L23.1387%2014.4578L17.6446%2014.4578L17.6446%203.85543ZM73.259%2071.8071C73.259%2073.9276%2071.9097%2076.1444%2069.7892%2076.1444L7.3314%2076.1444C5.21089%2076.1444%203.86155%2073.9276%203.86155%2071.8071L3.86155%2030.8434L73.259%2030.8434L73.259%2071.8071ZM73.259%2016.0964L73.259%2026.988L3.86136%2026.988L3.86136%2016.0964C3.69809%2014.2939%205.02696%2012.7003%206.8294%2012.5371C6.99618%2012.5219%207.16406%2012.5197%207.33121%2012.5302L13.4999%2012.5302L13.4999%2014.6507C13.4999%2016.7712%2015.5239%2018.3134%2017.6444%2018.3134L23.3313%2018.3134C25.3001%2018.3674%2026.9399%2016.815%2026.9939%2014.8461C26.9958%2014.781%2026.9958%2014.7159%2026.9939%2014.6507L26.9939%2012.53L50.1265%2012.53L50.1265%2014.6505C50.0724%2016.6194%2051.6249%2018.2591%2053.5937%2018.3132C53.6589%2018.315%2053.724%2018.315%2053.7891%2018.3132L59.476%2018.3132C61.5965%2018.3132%2063.6205%2016.771%2063.6205%2014.6505L63.6205%2012.53L69.7892%2012.53C71.5955%2012.4162%2073.152%2013.7883%2073.2659%2015.5946C73.2764%2015.7617%2073.2742%2015.9296%2073.259%2016.0964Z'%20fill='rgb(255,255,255)'%20fill-rule='nonzero'%20/%3e%3cpath%20id='Vector'%20d='M27.8619%2057.1569L26.1269%2066.7955C26.0583%2067.2089%2026.1262%2067.6336%2026.3205%2068.005C26.814%2068.9483%2027.9788%2069.313%2028.9221%2068.8195L37.5967%2064.2894L46.2713%2068.8195L47.1388%2069.0123C47.557%2069.0197%2047.9653%2068.8835%2048.2953%2068.6267C48.8715%2068.2059%2049.168%2067.5015%2049.0665%2066.7953L47.3316%2057.1567L54.3678%2050.4098C54.8712%2049.8658%2055.0539%2049.0983%2054.8496%2048.3858C54.5901%2047.7272%2054.0052%2047.2522%2053.3075%2047.1328L43.669%2045.687L39.3316%2036.9159C39.1425%2036.5255%2038.8274%2036.2102%2038.4371%2036.0213C37.4788%2035.5573%2036.326%2035.9578%2035.8618%2036.9159L31.5245%2045.687L21.8859%2047.1328C21.1882%2047.252%2020.6034%2047.7272%2020.3438%2048.3858C20.1396%2049.0983%2020.3224%2049.8658%2020.8257%2050.4098L27.8619%2057.1569ZM33.1631%2049.3498C33.7684%2049.2592%2034.2813%2048.8563%2034.5125%2048.2895L37.5967%2042.1208L40.681%2048.2895C40.9123%2048.8563%2041.425%2049.2592%2042.0303%2049.3498L48.8737%2050.3135L43.958%2055.0364C43.5001%2055.4897%2043.2854%2056.1339%2043.3797%2056.7713L44.5362%2063.6147L38.464%2060.3377L37.5965%2060.1449L36.7291%2060.3377L30.6569%2063.6147L31.8134%2056.7713C31.9079%2056.1339%2031.6929%2055.4897%2031.235%2055.0364L26.3194%2050.3135L33.1631%2049.3498Z'%20fill='rgb(255,255,255)'%20fill-rule='nonzero'%20/%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e" alt="time-and-date" class="stages__steps-img ">
+                            <h3 class="stages__title-h3">Scheduling:</h3>
+                            <p class="stages__steps-date">29 sep, 19:00 – 20 nov, 10:00</p>
+                        </div>
+                    </div>
+                    <div class="stages__btn">
+                        <span><i class="fa-solid fa-check"></i></span>
+                        Вы зарегистрированы
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="tournament">
+        <div class="container">
+            <div class="tournament__wrapper">
+                <h3 class="tournament__title">Зарегистрировано: 24</h3>
+                <p class="tournament__time">Осталось: 15мин 30сек</p>
+                <div class="tournament__list">
+                    <div class="tournament__list-header">
+                        <p class="tournament__list-sharp">#</p>
+                        <p class="tournament__team">Team</p>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                    <div class="tournament__list-item">
+                        <p class="tournament__list-number">353</p>
+                        <div class="tournament__list-team">
+                            <img src="data:image/svg+xml,%3csvg%20viewBox='0%200%2024%2018'%20xmlns='http://www.w3.org/2000/svg'%20xmlns:xlink='http://www.w3.org/1999/xlink'%20width='24.000000'%20height='18.000000'%20fill='none'%20customFrame='%23000000'%3e%3cg%20id='Group'%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%2018L0%2018L0%200Z'%20fill='rgb(255,213,0)'%20fill-rule='evenodd'%20/%3e%3cpath%20id='Vector'%20d='M0%200L24%200L24%209L0%209L0%200Z'%20fill='rgb(0,91,187)'%20fill-rule='evenodd'%20/%3e%3c/g%3e%3c/svg%3e" alt="ua flag" class="tournament__lins-flag">
+                            <p class="tournament__list-name">Dianne Russel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="info">
+                    <a href="#" class="info__btn">SUPPORT</a>
+                    <a href="#" class="info__btn">RULES</a>
+                    <a href="#" class="info__btn">FAQ</a>
+
+                </div>
+            </div>
+
+
+
+        </div>
+    </section>
+
+
+
+
+    <script src="https://kit.fontawesome.com/1b0456bb71.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -52,6 +52,12 @@
         text-align: center;
     }
 
+    &__steps-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__steps {
         display: flex;
         align-items: center;
@@ -109,6 +115,33 @@
             background-color: $white-color;
             left: 138px;
             top: 40px;
+        }
+    }
+
+    &__btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 341px;
+        height: 60px;
+        border-radius: 5px;
+        background-color: $white-color;
+        border: none;
+        margin-top: 70px;
+        color: $black-color;
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 25px;
+        letter-spacing: 1%;
+        text-align: center;
+        gap: 10px;
+
+        span {
+            font-size: 18px;
+            color: $yellow-color;
+            border: 1px solid $yellow-color;
+            border-radius: 100%;
+            padding: 2px;
         }
     }
 }

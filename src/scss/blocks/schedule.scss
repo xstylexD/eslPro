@@ -107,6 +107,7 @@
             z-index: 15;
             box-shadow: 10px 10px 7px -1px $yellow-color;
             transition: all 0.3s;
+            border-radius: 5px;
 
             &::after {
                 content: "WHATCH LIVE";
@@ -249,7 +250,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 100px;
+        gap: 150px;
         width: 100%;
         // position: absolute;
         margin-top: 55px;
@@ -257,10 +258,14 @@
 
     &-pagination-bullet {
         transform: translateY(-150%);
+        background-color: $light-gray-color !important;
+        width: 15px !important;
+        height: 15px !important;
+
     }
 
     &-pagination-bullet.swiper-pagination-bullet-active {
-        background-color: $yellow-color;
+        background-color: $yellow-color !important;
         width: 15px;
         height: 15px;
     }

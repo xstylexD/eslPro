@@ -2,7 +2,9 @@ import Swiper from 'swiper';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
+import 'swiper/css/autoplay';
+
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 
 
@@ -27,7 +29,7 @@ try {
 } catch (e) { }
 
 const swiper = new Swiper(".mySwiper", {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 4,
     loop: true,
     spaceBetween: 40,
@@ -39,11 +41,17 @@ const swiper = new Swiper(".mySwiper", {
 
     pagination: {
         el: ".swiper-pagination",
+
+    },
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
 
 const swiper__battles = new Swiper(".swiper__battles", {
-    modules: [Navigation, Pagination],
+    modules: [Navigation, Pagination, Autoplay],
     slidesPerView: 4,
     loop: true,
     spaceBetween: 40,
@@ -55,5 +63,9 @@ const swiper__battles = new Swiper(".swiper__battles", {
 
     pagination: {
         el: ".swiper-pagination",
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
     },
 });
