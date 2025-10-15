@@ -1,0 +1,114 @@
+@use "/src/scss/base/variables.scss" as *;
+
+.stages {
+    margin-top: 152px;
+    padding: 200px 0;
+    background-color: $yellow-color;
+
+    &__title {
+        color: $black-color;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 35px;
+        letter-spacing: 0%;
+        text-align: left;
+    }
+
+    &__text {
+        color: $black-color;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 30px;
+        letter-spacing: 1%;
+        text-align: left;
+        width: 608px;
+        margin-top: 20px;
+
+        span {
+            color: $white-color;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__steps-info {
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    &__title-h3 {
+        margin-top: 33px;
+        color: $black-color;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 25px;
+        letter-spacing: 1%;
+        text-align: center;
+    }
+
+    &__steps {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+
+        // &::after {
+        //     content: "";
+        //     height: 1px;
+        //     width: 76px;
+        //     position: absolute;
+        //     background-color: $white-color;
+        //     z-index: 55;
+        // }
+
+        &-img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    &__steps-date {
+        color: $black-color;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 1%;
+        text-align: center;
+    }
+
+    // &__steps-img:nth-child(1) {
+    //     position: relative;
+
+
+    // }
+
+    &__steps-decor {
+        position: relative;
+        display: block;
+
+        &::before {
+            content: "";
+            height: 2px;
+            width: 76px;
+            position: absolute;
+            background-color: $white-color;
+            right: 138px;
+            top: 40px;
+        }
+
+        &::after {
+            content: "";
+            height: 2px;
+            width: 76px;
+            position: absolute;
+            background-color: $white-color;
+            left: 138px;
+            top: 40px;
+        }
+    }
+}

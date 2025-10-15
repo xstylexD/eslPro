@@ -4,22 +4,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
-const swiper = new Swiper(".mySwiper", {
-    modules: [Navigation, Pagination],
-    slidesPerView: 4,
-    loop: true,
-    spaceBetween: 40,
-    navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-        clickable: true,
 
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-    }
-});
 
 try {
     const tabs = document.querySelectorAll(".schedule__btn");
@@ -41,3 +26,34 @@ try {
     contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
 } catch (e) { }
 
+const swiper = new Swiper(".mySwiper", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 4,
+    loop: true,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: ".swiper__next",
+        prevEl: ".swiper__prev",
+        clickable: true,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});
+
+const swiper__battles = new Swiper(".swiper__battles", {
+    modules: [Navigation, Pagination],
+    slidesPerView: 4,
+    loop: true,
+    spaceBetween: 40,
+    navigation: {
+        nextEl: ".swiper__next",
+        prevEl: ".swiper__prev",
+        clickable: true,
+    },
+
+    pagination: {
+        el: ".swiper-pagination",
+    },
+});
