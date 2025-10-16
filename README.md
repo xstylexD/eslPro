@@ -71,7 +71,9 @@ https://www.figma.com/design/pogDbYkScDkRC27qyP2xqS/ESL-Pro
 
 🔹 Додати анімації та hover-ефекти
 
-🧡 Дякую, що переглянули мій перший проєкт!
+---
+
+### 🧡 Дякую, що переглянули мій перший проєкт!
 Буду вдячний за відгуки та поради 🙏
 
 ---
@@ -138,3 +140,7 @@ There are still some minor issues with pagination and layout — I plan to fix t
 🔹 Improve SCSS structure
 
 🔹 Add animations and hover effects
+
+---
+### 🧡 Thanks for checking out my first project!
+Feedback and improvement suggestions are always welcome 🙏
