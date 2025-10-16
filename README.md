@@ -40,9 +40,9 @@
 "postcss": "^8.5.6",
 "sass-embedded": "^1.93.2",
 "vite": "^7.1.9",
-"swiper": "^12.0.2"```
+"swiper": "^12.0.2"
 
-🎨 Макет
+### 🎨 Макет
 
 📐 Дизайн у Figma:
 https://www.figma.com/design/pogDbYkScDkRC27qyP2xqS/ESL-Pro
@@ -93,13 +93,14 @@ Vite
 Swiper.js
 
 🔧 Plugins & Dependencies
+```json
 "@minko-fe/postcss-pxtorem": "^1.5.0",
 "postcss": "^8.5.6",
 "sass-embedded": "^1.93.2",
 "vite": "^7.1.9",
 "swiper": "^12.0.2"
 
-🎨 Design Source
+### 🎨 Design Source
 
 🎨 Figma design:
 https://www.figma.com/design/pogDbYkScDkRC27qyP2xqS/ESL-Pro
